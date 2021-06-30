@@ -4,7 +4,7 @@ const domainRegex = {
     dom : /(http(s)?:\/\/|www.)([a-z0-9\w]+\.*)+[a-z0-9]{2,4}/gi,
     par : /(http(s)?:\/\/|www.)([a-z0-9\w]+\.*)+[a-z0-9]{2,4}([\/a-z0-9-%#?&=\w])+(\.[a-z0-9]{2,4}(\?[\/a-z0-9-%#?&=\w]+)*)*/gi
   }
-const phoneFormChange = function (phone:string){
+const phoneFormChange = function (phone){
     if(phone.match( /^\d{11}$/ )){
         phone = phone.substr(0,3) + "-" + phone.substr(3, 4) + "-" + phone.substr(7,4);
         return phone;
