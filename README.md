@@ -1,4 +1,4 @@
-# regex-email
+# types-regex
 [![NPM version][npm-image]][npm-url]
 [![Downloads][downloads-image]][downloads-url]
 
