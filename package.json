@@ -1,6 +1,6 @@
 {
   "name": "types-regex",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "all regex with TypeScript",
   "main": "index.js",
   "scripts": {
