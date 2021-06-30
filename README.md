@@ -11,11 +11,41 @@ $ npm install types-regex
 ```
 
 ## Usage
+### Email
 ``` ts
 import {emailRegex} from 'types-regex';
 
 emailRegex.test('dev+bob@gmail.com');
 // => true
+```
+### Phone
+``` ts
+import {phoneRegex} from 'types-regex';
+
+phoneRegex.test('01012345678');
+// => true
+```
+
+### Domain
+
+``` ts
+import {domainRegex} from 'types-regex';
+
+// if doesn't include params
+domainRegex.dom.test('www.devbob.com');
+// => true
+
+// if include params
+domainRegex.dom.test('www.devbob.com?email=devbob@gmail.com');
+// => true
+```
+### change phone forms
+
+``` ts
+import {phoneFormChange} from 'types-regex';
+
+phoneFormChange('01012345678');
+// => 010-1234-5678
 ```
 
 ## License
