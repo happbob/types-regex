@@ -2,19 +2,32 @@
   "name": "types-regex",
   "version": "1.0.3",
   "description": "all regex with TypeScript",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
   },
   "author": "limms2000 <limms1217@naver.com>",
   "license": "ISC",
   "repository": {
-    "type":"git",
-    "url":"https://github.com/limms2000/types-regex"
+    "type": "git",
+    "url": "https://github.com/limms2000/types-regex"
   },
   "bugs": {
-    "email":"limms1217@naver.com"
+    "email": "limms1217@naver.com"
   },
   "homepage": "https://github.com/limms2000/types-regex",
-  "keywords": ["regex","typescript","regex with typescript","typescript regex","regex email","regex phone","types-regex"]
+  "keywords": [
+    "regex",
+    "typescript",
+    "regex with typescript",
+    "typescript regex",
+    "regex email",
+    "regex phone",
+    "types-regex"
+  ],
+  "devDependencies": {
+    "typescript": "^4.3.4"
+  }
 }
