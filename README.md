@@ -21,11 +21,7 @@ emailRegex.test('dev+bob@gmail.com');
 ## License
 [MIT](https://tldrlegal.com/license/mit-license)
 
-[npm-image]: https://img.shields.io/npm/v/regex-email.svg?style=flat-square
+[npm-image]: https://img.shields.io/npm/v/types-regex?style=flat-square
 [npm-url]: https://www.npmjs.com/package/types-regex
-[travis-image]: https://img.shields.io/travis/regexps/regex-email.svg?style=flat-square
-[travis-url]: https://travis-ci.org/regexps/regex-email
-[coveralls-image]: https://img.shields.io/coveralls/regexps/regex-email.svg?style=flat-square
-[coveralls-url]: https://coveralls.io/r/regexps/regex-email?branch=master
-[downloads-image]: http://img.shields.io/npm/dm/regex-email.svg?style=flat-square
+[downloads-image]: https://img.shields.io/npm/dt/types-regex?style=flat-square
 [downloads-url]: https://www.npmjs.com/package/types-regex
