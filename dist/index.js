@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.phoneFormChange = exports.domainRegex = exports.phoneRegex = exports.emailRegex = void 0;
+exports.passwordRegex = exports.phoneFormChange = exports.domainRegex = exports.phoneRegex = exports.emailRegex = void 0;
 var emailRegex = /^([\w_\.\-\+])+\@([\w\-]+\.)+([\w]{2,10})+$/;
 exports.emailRegex = emailRegex;
 var phoneRegex = /^\d{11}$/;
@@ -20,3 +20,22 @@ var phoneFormChange = function (phone) {
     }
 };
 exports.phoneFormChange = phoneFormChange;
+var passwordRegex = function (min, max, specialChar, capitalFlag) {
+    if (min === void 0) { min = 8; }
+    if (max === void 0) { max = 20; }
+    if (specialChar === void 0) { specialChar = 'N'; }
+    if (capitalFlag === void 0) { capitalFlag = 'N'; }
+    var finalReg = "^(?=.*[a-z])(?=.*[0-9])";
+    var length = "(?=.{" + min + "," + max + "}$)";
+    var special = "";
+    var capital = "";
+    if (specialChar == 'Y') {
+        special = "(?=.*[!@#$%^&*])";
+    }
+    if (capitalFlag == 'Y') {
+        capital = "(?=.*[A-Z])";
+    }
+    finalReg = finalReg + special + capital + length;
+    return new RegExp(finalReg);
+};
+exports.passwordRegex = passwordRegex;

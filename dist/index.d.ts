@@ -5,4 +5,5 @@ declare const domainRegex: {
     par: RegExp;
 };
 declare const phoneFormChange: (phone: string) => string;
-export { emailRegex, phoneRegex, domainRegex, phoneFormChange };
+declare const passwordRegex: (min?: number, max?: number, specialChar?: string, capitalFlag?: string) => RegExp;
+export { emailRegex, phoneRegex, domainRegex, phoneFormChange, passwordRegex };

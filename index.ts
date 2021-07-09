@@ -15,7 +15,7 @@ const phoneFormChange = function (phone:string){
 
 const passwordRegex = function (min:number=8,max:number=20,specialChar:string='N',capitalFlag:string='N'){
     let finalReg = `^(?=.*[a-z])(?=.*[0-9])`;
-    const length = `(?=.{${min},${max}})`;
+    const length = `(?=.{${min},${max}}$)`;
     let special=``;
     let capital=``;
     if(specialChar=='Y'){
