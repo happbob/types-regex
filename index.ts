@@ -12,4 +12,21 @@ const phoneFormChange = function (phone:string){
         return '';
     }
 }
-export {emailRegex, phoneRegex, domainRegex, phoneFormChange};
+
+const passwordRegex = function (min:number=8,max:number=20,specialChar:string='N',capitalFlag:string='N'){
+    let finalReg = `^(?=.*[a-z])(?=.*[0-9])`;
+    const length = `(?=.{${min},${max}})`;
+    let special=``;
+    let capital=``;
+    if(specialChar=='Y'){
+        special = `(?=.*[!@#\$%\^&\*])`;
+    }
+    if(capitalFlag=='Y'){
+        capital = `(?=.*[A-Z])`;
+    }
+    finalReg = finalReg+special+capital+length;
+
+    return new RegExp(finalReg);
+}
+
+export {emailRegex, phoneRegex, domainRegex, phoneFormChange, passwordRegex};
